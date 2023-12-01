@@ -1,16 +1,10 @@
+import { useRoutes } from "react-router-dom";
 import "./App.css";
-import Footer from "./layout/footer/Footer";
-import Header from "./layout/header/Header";
-import { Outlet } from "react-router-dom";
+import { routes } from "./routes/Routes";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Outlet />
-      <Footer />
-    </>
-  );
+  const myRoute=useRoutes(routes);
+  return <>{myRoute}</>;
 }
 
 export default App;

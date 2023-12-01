@@ -1,12 +1,11 @@
-
-import App from "../App";
+import { RouteObject } from "react-router-dom";
 import About from "../components/about/About";
 import Home from "../components/home/Home";
-
-export const routes = [
+import MainLayout from "../container/MainLayout";
+export const routes: RouteObject[] = [
   {
     path: "",
-    element: <App />,
+    element: <MainLayout />,
     children: [
       {
         index: true,
@@ -18,5 +17,4 @@ export const routes = [
       },
     ],
   },
-];
-
+] as RouteObject[];
