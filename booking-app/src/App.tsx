@@ -1,9 +1,7 @@
-import { useRoutes } from "react-router-dom";
 import "./App.css";
-import { routes } from "./routes/Routes";
-
+import { useAuthMapRoutes } from "./routes/Routes";
 function App() {
-  const myRoute=useRoutes(routes);
+  const myRoute=useAuthMapRoutes();
   return <>{myRoute}</>;
 }
 
